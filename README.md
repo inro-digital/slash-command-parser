@@ -10,9 +10,7 @@ Basic Usage:
 import parse from 'https://deno.land/x/slash_command_parser/mod.ts'
 
 parse('/todos add name: My Todo Name')
-```
 
-```ts
 {
   text: 'add name: My Todo Name',
   command: 'todos',
@@ -24,10 +22,7 @@ parse('/todos add name: My Todo Name')
 Pass in a template to parse options:
 
 ```ts
-import parse, {
-  OptionDefinition,
-  OptionType,
-} from 'https://deno.land/x/slash_command_parser/mod.ts'
+import parse, { OptionDefinition, OptionType } from 'slash_command_parser'
 
 const template: OptionDefinition[] = [
   { name: 'item', type: OptionType.string },
@@ -36,9 +31,7 @@ const template: OptionDefinition[] = [
 ]
 
 parse('/todos add item: lettuce howmany: 2 complete: false', template)
-```
 
-```ts
 {
   text: 'add item: lettuce howmany: 2 complete: false',
   command: 'todos',
@@ -54,11 +47,12 @@ import {
   parseCommand,
   parseOptions,
   parseSubCommands,
-} from 'https://deno.land/x/slash_command_parser/mod.ts'
+} from 'slash_command_parser'
 
 const content = 'add item: lettuce howmany: 2 complete: false'
 
 // Just parsing command + text can give you a "Slack"-style slashcommand
+// Also useful if you want to use a custom subCommand or options parser
 const { command, text } = parseCommand(content)
 
 // Expand to support 4 sub-commands instead of 2
