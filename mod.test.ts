@@ -1,4 +1,4 @@
-import { assertEquals, assertThrows } from 'std/testing/asserts.ts'
+import { assertEquals, assertThrows } from 'jsr:@std/testing/asserts'
 import parse, { isCommand, OptionType, parseCommand } from './mod.ts'
 
 Deno.test('isCommand == true', () => {

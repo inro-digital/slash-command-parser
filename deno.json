@@ -7,9 +7,6 @@
     "semiColons": false,
     "singleQuote": true
   },
-  "imports": {
-    "std/": "https://deno.land/std@0.201.0/"
-  },
   "tasks": {
     "test": "deno fmt && deno check ./mod.ts && deno lint && deno test -A ./"
   }
