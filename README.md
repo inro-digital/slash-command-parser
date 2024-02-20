@@ -7,7 +7,7 @@ A generic parser for slash command text input. Pulls inspiration from Slack and 
 Basic Usage:
 
 ```ts
-import parse from 'https://deno.land/x/slash_command_parser/mod.ts'
+import parse from 'jsr:@inro/slash-command-parser'
 
 parse('/todos add name: My Todo Name')
 
@@ -22,7 +22,7 @@ parse('/todos add name: My Todo Name')
 Pass in a template to parse options:
 
 ```ts
-import parse, { OptionDefinition, OptionType } from 'slash_command_parser'
+import parse, { OptionDefinition, OptionType } from 'jsr:@inro/slash-command-parser'
 
 const template: OptionDefinition[] = [
   { name: 'item', type: OptionType.string },
@@ -47,7 +47,7 @@ import {
   parseCommand,
   parseOptions,
   parseSubCommands,
-} from 'slash_command_parser'
+} from 'jsr:@inro/slash-command-parser'
 
 const content = 'add item: lettuce howmany: 2 complete: false'
 
